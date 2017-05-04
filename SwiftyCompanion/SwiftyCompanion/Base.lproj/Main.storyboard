@@ -30,29 +30,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDd-on-lCW">
+                                <rect key="frame" x="112" y="356" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.26697000579667418" green="0.58854166666666674" blue="0.53873392197857473" alpha="0.79512392241379315" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XOu-kd-rfx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="98h-Dq-krm"/>
                             <constraint firstItem="HMG-Qb-0T9" firstAttribute="leading" secondItem="XOu-kd-rfx" secondAttribute="trailing" constant="-262.5" id="9rF-Eg-ejO"/>
+                            <constraint firstItem="IDd-on-lCW" firstAttribute="centerX" secondItem="HMG-Qb-0T9" secondAttribute="centerX" id="APe-UZ-w4L"/>
                             <constraint firstItem="HMG-Qb-0T9" firstAttribute="centerX" secondItem="XOu-kd-rfx" secondAttribute="centerX" id="DXW-g3-nh1"/>
                             <constraint firstItem="HMG-Qb-0T9" firstAttribute="centerY" secondItem="XOu-kd-rfx" secondAttribute="centerY" id="K7M-Y7-Fmw"/>
                             <constraint firstItem="XOu-kd-rfx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="N0O-lc-pKb"/>
                             <constraint firstItem="HMG-Qb-0T9" firstAttribute="top" secondItem="XOu-kd-rfx" secondAttribute="bottom" constant="-348.5" id="N83-10-bqZ"/>
+                            <constraint firstItem="IDd-on-lCW" firstAttribute="width" secondItem="HMG-Qb-0T9" secondAttribute="width" id="RP0-Nh-67j"/>
                             <constraint firstItem="XOu-kd-rfx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2y-MR-pd9"/>
                             <constraint firstItem="XOu-kd-rfx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mWI-bT-nzU"/>
+                            <constraint firstItem="IDd-on-lCW" firstAttribute="top" secondItem="HMG-Qb-0T9" secondAttribute="bottom" constant="8" id="wuR-l0-ENA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="0Nr-AN-WfJ"/>
                     <connections>
-                        <segue destination="of9-jy-OcV" kind="show" identifier="showDetail" id="u1u-sx-5NU"/>
+                        <segue destination="of9-jy-OcV" kind="show" identifier="showDetailLogin" id="grz-zI-gSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="Ga4-eI-WKP">
             <objects>
                 <viewController id="of9-jy-OcV" sceneMemberID="viewController">
@@ -63,8 +73,20 @@
                     <view key="view" contentMode="scaleToFill" id="DkM-1b-VQi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-29-PPw">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qV6-29-PPw" firstAttribute="width" secondItem="DkM-1b-VQi" secondAttribute="width" id="JfS-iP-WjD"/>
+                            <constraint firstItem="qV6-29-PPw" firstAttribute="height" secondItem="DkM-1b-VQi" secondAttribute="height" id="dRv-q4-jQK"/>
+                            <constraint firstItem="qV6-29-PPw" firstAttribute="centerY" secondItem="DkM-1b-VQi" secondAttribute="centerY" id="djQ-G8-7mj"/>
+                            <constraint firstItem="qV6-29-PPw" firstAttribute="centerX" secondItem="DkM-1b-VQi" secondAttribute="centerX" id="vTy-dQ-dSh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile" id="kLH-r0-jOL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EJ-Lv-8qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
